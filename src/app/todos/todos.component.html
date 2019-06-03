@@ -1,3 +1,18 @@
-<p>
-  todos works!
-</p>
+<h3>{{ variable }}</h3>
+<h4>Añadir tarea</h4>
+
+<h3>Listado de tareas</h3>
+<ul>
+  <li *ngFor="let todo of todos">
+    {{todo.text}}
+  </li>
+</ul>
+
+<h4>Añadir tarea</h4>
+<form (submit)="addTodo()" >
+  <input type="text" [(ngModel)]="todoText"
+         [ngModelOptions]="{standalone: true}"/>
+</form>
+
+<h3>Tarea introducida en el input del formulario</h3>
+<p>{{ todoText }}</p>
