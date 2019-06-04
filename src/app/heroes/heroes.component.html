@@ -1,7 +1,7 @@
 <h1>Listado de héroes</h1>
 <ul>
   <li *ngFor="let h of heroes">
-    {{ h.name }}
+    {{ h.name }} <button (click)="borraHeroe(h)">Borrar</button>
     {{ h | json }}
   </li>
 </ul>

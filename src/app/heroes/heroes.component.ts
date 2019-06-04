@@ -27,4 +27,17 @@ export class HeroesComponent implements OnInit {
     this.hero = new Hero();
   }
 
+  /**
+   * Elimina un héroe.
+   * -- No funciona --
+   * @param h
+   */
+  borraHeroe(h: Hero) {
+    const posicion = this.heroes.indexOf(h);
+    console.log(posicion);
+    if (posicion) {
+      this.heroes.splice(posicion, 1, h);
+    }
+  }
+
 }
