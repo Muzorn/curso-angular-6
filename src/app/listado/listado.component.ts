@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoComponent implements OnInit {
 
-  constructor() { }
+  public textCadena: string;
+  public listadoCadenas: string[];
+
+  constructor() {
+    this.listadoCadenas = ['Cadena 1', 'Cadena 2', 'Cadena 3'];
+  }
 
   ngOnInit() {
   }
 
+  addCadena() {
+    this.listadoCadenas.push(this.textCadena);
+    this.textCadena = '';
+  }
 }

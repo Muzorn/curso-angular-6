@@ -1,3 +1,10 @@
-<p>
-  listado works!
-</p>
+<h1>Ejercicios unidad 3: parte 1</h1>
+<ul *ngFor="let cadena of listadoCadenas">
+  <li>{{ cadena }}</li>
+</ul>
+
+<h2>Formulario</h2>
+<form (ngSubmit)="addCadena()">
+  <input type="text" [(ngModel)]="textCadena"
+         [ngModelOptions]="{standalone: true}">
+</form>
