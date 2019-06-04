@@ -8,10 +8,13 @@ import { Cliente } from '../entities/cliente';
 })
 export class MisclientesComponent implements OnInit {
 
+  public cliente: Cliente;
   // public clientes: [Cliente];
   public clientes: Cliente[];
 
   constructor() {
+    // Inicialización necesaria de propiedades
+    this.cliente = new Cliente('', '');
     // this.clientes = new Array<Cliente>();
     this.clientes = [];
     this.clientes.push(new Cliente('Cliente 1', 'Calle Falsa 123'));
@@ -22,4 +25,9 @@ export class MisclientesComponent implements OnInit {
   ngOnInit() {
   }
 
+  addCliente() {
+    this.clientes.push(new Cliente(this.cliente.nombre, this.cliente.direccion));
+    // this.clientes.push(this.cliente);
+    this.cliente = new Cliente('', '');
+  }
 }

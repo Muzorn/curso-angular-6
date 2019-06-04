@@ -2,3 +2,12 @@
 <ul *ngFor="let cliente of clientes">
   <li>{{ cliente }}</li>
 </ul>
+
+<h3>Formulario de creación de un cliente</h3>
+<form (ngSubmit)="addCliente()">
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="cliente.nombre" [ngModelOptions]="{standalone: true}">
+  <label>Dirección</label>
+  <input type="text" [(ngModel)]="cliente.direccion" [ngModelOptions]="{standalone: true}">
+  <input type="submit">
+</form>
