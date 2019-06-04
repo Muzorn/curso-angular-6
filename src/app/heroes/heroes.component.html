@@ -1,15 +1,16 @@
 <h1>Listado de héroes</h1>
 <ul>
-  <li *ngFor="let hero of heroes">
-    {{ hero.name }}
-    {{ hero | json }}
+  <li *ngFor="let h of heroes">
+    {{ h.name }}
+    {{ h | json }}
   </li>
 </ul>
 
 <h4>Añadir héroe</h4>
 <form (submit)="addHeroe()" >
-  <input type="text" [(ngModel)]="heroName"
+  <input type="text" [(ngModel)]="hero.id"
          [ngModelOptions]="{standalone: true}"/>
+  <input type="text" [(ngModel)]="hero.name"
+         [ngModelOptions]="{standalone: true}"/>
+  <input type="submit">
 </form>
-
-{{ heroName }}
