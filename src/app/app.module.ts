@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { ListadoComponent } from './listado/listado.component';
+import { MisclientesComponent } from './misclientes/misclientes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     HeroesComponent,
-    ListadoComponent
+    ListadoComponent,
+    MisclientesComponent
   ],
   imports: [
     BrowserModule,
