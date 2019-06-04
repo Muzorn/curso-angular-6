@@ -7,6 +7,7 @@ import { TodosComponent } from './todos/todos.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { ListadoComponent } from './listado/listado.component';
 import { MisclientesComponent } from './misclientes/misclientes.component';
+import { CondicionalesComponent } from './condicionales/condicionales.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MisclientesComponent } from './misclientes/misclientes.component';
     TodosComponent,
     HeroesComponent,
     ListadoComponent,
-    MisclientesComponent
+    MisclientesComponent,
+    CondicionalesComponent
   ],
   imports: [
     BrowserModule,
