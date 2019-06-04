@@ -8,6 +8,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { ListadoComponent } from './listado/listado.component';
 import { MisclientesComponent } from './misclientes/misclientes.component';
 import { CondicionalesComponent } from './condicionales/condicionales.component';
+import {TodoService} from './todo.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { CondicionalesComponent } from './condicionales/condicionales.component'
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
