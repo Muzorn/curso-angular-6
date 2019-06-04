@@ -1,3 +1,15 @@
-<p>
-  heroes works!
-</p>
+<h1>Listado de héroes</h1>
+<ul>
+  <li *ngFor="let hero of heroes">
+    {{ hero.name }}
+    {{ hero | json }}
+  </li>
+</ul>
+
+<h4>Añadir héroe</h4>
+<form (submit)="addHeroe()" >
+  <input type="text" [(ngModel)]="heroName"
+         [ngModelOptions]="{standalone: true}"/>
+</form>
+
+{{ heroName }}

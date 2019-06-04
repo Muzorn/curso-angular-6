@@ -8,18 +8,25 @@ import {Hero} from '../entities/hero';
 })
 export class HeroesComponent implements OnInit {
 
+  // Propiedades/Atributos de la clase del modelo para interactuar con él
   public hero: Hero;
   public heroes: [Hero];
 
+  public heroName;
+
   constructor() {
-    this.hero = new Hero();
-    this.hero.id = 1;
-    this.hero.name = 'Pepe';
+    this.hero = new Hero(1, 'Pepe');
     this.heroes = [this.hero];
-    this.heroes.push(new Hero());
+    this.heroes.push(new Hero(2, 'Paco'));
   }
 
   ngOnInit() {
+  }
+
+  addHeroe() {
+    this.heroes.push(new Hero(1, this.heroName));
+    // "Limpiamos" el input del formulario
+    this.heroName = '';
   }
 
 }
