@@ -13,9 +13,9 @@ export class HeroesComponent implements OnInit {
   public heroes: [Hero];
 
   constructor() {
-    this.hero = new Hero(1, 'Pepe');
-    this.heroes = [this.hero];
-    this.heroes.push(new Hero(2, 'Paco'));
+    this.hero = new Hero(0, '');
+    this.heroes = [];
+    // this.heroes.push(new Hero(2, 'Paco'));
   }
 
   ngOnInit() {
