@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Observable} from 'rxjs';
 import { Resultado } from '../entities/resultado';
 
 @Component({
@@ -10,6 +11,7 @@ import { Resultado } from '../entities/resultado';
 export class ResultadosComponent implements OnInit {
 
   public resultados: Resultado[];
+  public url = 'https://cursosdedesarrollo.com/pactometro/resultados.json';
 
   constructor(private httpClient: HttpClient) {
     this.resultados = [];
@@ -18,6 +20,13 @@ export class ResultadosComponent implements OnInit {
     this.resultados.push(new Resultado('C`s', 44, 'cs-logo.png'));
     this.resultados.push(new Resultado('PODEMOS', 15, 'podemos-logo.png'));
     this.resultados.push(new Resultado('IU', 5, 'iu-logo.png'));
+
+    this.resultados = this.getResultados();
+    
+  }
+  
+  getResultados() {
+    return this.httpClient.get<Observable<Resultado[]>>(this.url).toPromise();
   }
 
   ngOnInit() {
