@@ -14,7 +14,7 @@ export class HeroesComponent implements OnInit {
 
   constructor() {
     this.hero = new Hero(0, '');
-    this.heroes = [];
+    this.heroes = [this.hero];
     // this.heroes.push(new Hero(2, 'Paco'));
   }
 
@@ -24,7 +24,7 @@ export class HeroesComponent implements OnInit {
   addHeroe() {
     this.heroes.push(new Hero(this.hero.id, this.hero.name));
     // "Limpiamos" el input del formulario
-    this.hero = new Hero();
+    this.hero = new Hero(0, '');
   }
 
   /**
