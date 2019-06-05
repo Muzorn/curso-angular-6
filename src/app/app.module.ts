@@ -8,6 +8,10 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { ListadoComponent } from './listado/listado.component';
 import { MisclientesComponent } from './misclientes/misclientes.component';
 import { CondicionalesComponent } from './condicionales/condicionales.component';
+import {TodoService} from './todo.service';
+import { ResultadosComponent } from './resultados/resultados.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ResultadosServiceService} from './resultados-service.service';
 
 @NgModule({
   declarations: [
@@ -16,14 +20,16 @@ import { CondicionalesComponent } from './condicionales/condicionales.component'
     HeroesComponent,
     ListadoComponent,
     MisclientesComponent,
-    CondicionalesComponent
+    CondicionalesComponent,
+    ResultadosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [TodoService, ResultadosServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

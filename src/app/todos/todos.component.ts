@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from "../todo.service";
 
 @Component({
   selector: 'app-todos',
@@ -12,7 +13,7 @@ export class TodosComponent implements OnInit {
 
   todoText;
 
-  constructor() { }
+  constructor(private __todoService: TodoService) { }
 
   todos;
 

@@ -1,0 +1,12 @@
+<h1>Resultados de las últimas elecciones</h1>
+<ul *ngFor="let resultado of resultados | async">
+  <ul>
+    <li>Partido{{ resultado.nombre}}</li>
+    <li>Número de diputados: {{ resultado.dipu}}</li>
+    <li>{{ resultado.imagen }}</li>
+    <li>Logo:
+      <img src="https://cursosdedesarrollo.com/pactometro/img/{{ resultado.imagen }}" width="200" height="200">
+    </li>
+  </ul>
+</ul>
+
