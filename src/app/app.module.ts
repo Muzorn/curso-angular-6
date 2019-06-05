@@ -11,6 +11,7 @@ import { CondicionalesComponent } from './condicionales/condicionales.component'
 import {TodoService} from './todo.service';
 import { ResultadosComponent } from './resultados/resultados.component';
 import {HttpClientModule} from '@angular/common/http';
+import {ResultadosServiceService} from './resultados-service.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [TodoService],
+  providers: [TodoService, ResultadosServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
