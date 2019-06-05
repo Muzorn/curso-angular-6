@@ -10,6 +10,7 @@ import { MisclientesComponent } from './misclientes/misclientes.component';
 import { CondicionalesComponent } from './condicionales/condicionales.component';
 import {TodoService} from './todo.service';
 import { ResultadosComponent } from './resultados/resultados.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ResultadosComponent } from './resultados/resultados.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
