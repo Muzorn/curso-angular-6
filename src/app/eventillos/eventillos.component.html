@@ -16,7 +16,12 @@
     <form #basicForm="ngForm" name="basicForm" (ngSubmit)="onSubmitForm(basicForm)">
       <div class="form-group">
         <label>Nombre</label>
-        <input type="text" class="form-control" [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}">
+        <input type="text" class="form-control" name="textForm" #textForm="ngModel"
+               (blur)="onBlur($event)" minlength="5"
+               [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}">
+        <div *ngIf="textForm.errors?.minlength">
+          La longitud del campo es válida.
+        </div>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-success">Enviar</button>

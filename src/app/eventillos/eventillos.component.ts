@@ -45,11 +45,24 @@ export class EventillosComponent implements OnInit {
   }
 
   onSubmitForm(basicForm: NgForm) {
+    // La gestión de este evento sólo sería para comprobar si formulario enviado, válido, etc.
     console.log(basicForm);
     console.log(basicForm.controls);
     console.log(basicForm.submitted);
 
     console.log(this.nombre);
+  }
+
+  onBlur($event) {
+    console.log('Esta función no sé para qué la quiero');
+    const valorInput = $event.target.value;
+    console.log(valorInput);
+
+    console.log();
+
+    if (valorInput.length >= 5) {
+      console.log('La longitud del campo es válida');
+    }
   }
 
 }
