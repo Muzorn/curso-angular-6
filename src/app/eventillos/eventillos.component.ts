@@ -12,4 +12,23 @@ export class EventillosComponent implements OnInit {
   ngOnInit() {
   }
 
+  clicked($event) {
+    const textoBoton = $event.target.innerHTML;
+
+    switch (textoBoton) {
+      case 'Bueno':
+        console.log('¡Buenos días!');
+        break;
+      case 'Feo':
+        console.log('¡Y tú qué miras!');
+        break;
+      case 'Malo':
+        console.log('¡Vete a cagar!');
+        break;
+      case 'default':
+        console.log('No has pulsado ninguno de los 3 botones');
+        break;
+    }
+  }
+
 }
