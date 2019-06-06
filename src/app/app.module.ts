@@ -13,6 +13,12 @@ import { ResultadosComponent } from './resultados/resultados.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ResultadosServiceService} from './resultados-service.service';
 import { EventillosComponent } from './eventillos/eventillos.component';
+import { RouterModule, Routes} from '@angular/router';
+import { HomeComponentComponent } from './home-component/home-component.component';
+
+const routes: Routes [
+  { path: 'home', component: HomeComponentComponent }
+  ];
 
 @NgModule({
   declarations: [
@@ -23,15 +29,18 @@ import { EventillosComponent } from './eventillos/eventillos.component';
     MisclientesComponent,
     CondicionalesComponent,
     ResultadosComponent,
-    EventillosComponent
+    EventillosComponent,
+    HomeComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    RouterModule,
   ],
   providers: [TodoService, ResultadosServiceService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
