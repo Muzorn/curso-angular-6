@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-eventillos',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eventillos.component.css']
 })
 export class EventillosComponent implements OnInit {
+
+  public nombre: string;
 
   constructor() { }
 
@@ -39,6 +42,14 @@ export class EventillosComponent implements OnInit {
     } else {
       console.log('El ratón ha entrado en un botón que no es el bueno');
     }
+  }
+
+  onSubmitForm(basicForm: NgForm) {
+    console.log(basicForm);
+    console.log(basicForm.controls);
+    console.log(basicForm.submitted);
+
+    console.log(this.nombre);
   }
 
 }

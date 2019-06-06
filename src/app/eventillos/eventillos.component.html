@@ -7,3 +7,20 @@
     <button type="button" class="mb-3 btn btn-danger" (click)="clicked($event)">Malo</button>
   </div>
 </div>
+
+<div class="dropdown-divider"></div>
+
+<div class="container">
+  <div class="row d-flex flex-column">
+    <h2 class="display-2 text-center">Gestión de evento submit</h2>
+    <form #basicForm="ngForm" name="basicForm" (ngSubmit)="onSubmitForm(basicForm)">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
