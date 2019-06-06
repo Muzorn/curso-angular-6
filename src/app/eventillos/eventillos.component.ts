@@ -31,4 +31,14 @@ export class EventillosComponent implements OnInit {
     }
   }
 
+  mousedOver($event) {
+    const textoBoton = $event.target.innerHTML;
+
+    if (textoBoton === 'Bueno') {
+      console.log('Jijijijijiji');
+    } else {
+      console.log('El ratón ha entrado en un botón que no es el bueno');
+    }
+  }
+
 }
