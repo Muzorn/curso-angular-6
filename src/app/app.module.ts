@@ -12,6 +12,7 @@ import {TodoService} from './todo.service';
 import { ResultadosComponent } from './resultados/resultados.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ResultadosServiceService} from './resultados-service.service';
+import { EventillosComponent } from './eventillos/eventillos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {ResultadosServiceService} from './resultados-service.service';
     ListadoComponent,
     MisclientesComponent,
     CondicionalesComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    EventillosComponent
   ],
   imports: [
     BrowserModule,
