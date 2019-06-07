@@ -12,6 +12,7 @@ import {TodoService} from './todo.service';
 import { ResultadosComponent } from './resultados/resultados.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ResultadosServiceService} from './resultados-service.service';
+import { FormulariosComponent } from './formularios/formularios.component';
 import { EventillosComponent } from './eventillos/eventillos.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -36,7 +37,8 @@ const routes: Routes = [
     CondicionalesComponent,
     ResultadosComponent,
     EventillosComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    FormulariosComponent
   ],
   imports: [
     BrowserModule,
