@@ -18,6 +18,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AppImportsModule } from './angular-imports/app-imports.module';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponentComponent },
   { path: 'todo', component: TodosComponent },
@@ -39,7 +41,7 @@ const routes: Routes = [
     ResultadosComponent,
     EventillosComponent,
     HomeComponentComponent,
-    FormulariosComponent
+    FormulariosComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +52,7 @@ const routes: Routes = [
       routes
     ),
     BrowserAnimationsModule,
+    AppImportsModule
   ],
   providers: [TodoService, ResultadosServiceService],
   bootstrap: [AppComponent]
