@@ -16,6 +16,7 @@ import { FormulariosComponent } from './formularios/formularios.component';
 import { EventillosComponent } from './eventillos/eventillos.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponentComponent },
@@ -48,6 +49,7 @@ const routes: Routes = [
     RouterModule.forRoot(
       routes
     ),
+    BrowserAnimationsModule,
   ],
   providers: [TodoService, ResultadosServiceService],
   bootstrap: [AppComponent]
