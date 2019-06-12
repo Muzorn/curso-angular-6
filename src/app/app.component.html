@@ -1,47 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1 class="display-1 text-center">Curso de Angular 6</h1>
-<div class="dropdown-divider"></div>
-<!--  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">-->
+<mat-toolbar>
+  <span>Curso de Angular 6</span>
 
-<!--<app-eventillos></app-eventillos>-->
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item routerLink="/home" routerLinkActive="active">Inicio</button>
+    <button mat-menu-item routerLink="/todo" routerLinkActive="active">Todo</button>
+    <button mat-menu-item routerLink="/heroes" routerLinkActive="active">Héroes</button>
+    <button mat-menu-item routerLink="/resultados-electorales" routerLinkActive="active">Resultados electorales</button>
+    <button mat-menu-item routerLink="/clientes" routerLinkActive="active">Clientes</button>
+    <button mat-menu-item routerLink="/eventos" routerLinkActive="active">Eventos</button>
+    <button mat-menu-item routerLink="/formularios" routerLinkActive="active">Formularios</button>
+  </mat-menu>
 
-<!--<app-formularios></app-formularios>-->
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
 
-<!--<app-resultados></app-resultados>-->
-
-<!--<app-todos></app-todos>-->
-
-<!--<app-listado></app-listado>-->
-
-<!--<app-misclientes></app-misclientes>-->
-
-<!--<app-condicionales></app-condicionales>-->
-
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/home" routerLinkActive="active">Inicio</a>
-    </li>
-    <li>
-      <a routerLink="/todo" routerLinkActive="active">Todo</a>
-    </li>
-    <li>
-      <a routerLink="/heroes" routerLinkActive="active">Héroes</a>
-    </li>
-    <li>
-      <a routerLink="/resultados-electorales" routerLinkActive="active">Resultados electorales</a>
-    </li>
-    <li>
-      <a routerLink="/clientes" routerLinkActive="active">Mis clientes</a>
-    </li>
-    <li>
-      <a routerLink="/eventos" routerLinkActive="active">Eventos</a>
-    </li>
-    <li>
-      <a routerLink="/formulario" routerLinkActive="active">Formulario</a>
-    </li>
-  </ul>
-</nav>
 <router-outlet></router-outlet>
 
 
